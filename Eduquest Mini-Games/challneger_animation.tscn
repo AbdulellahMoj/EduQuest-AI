@@ -1,0 +1,871 @@
+[gd_scene load_steps=25 format=3 uid="uid://bsrjufq5adq7f"]
+
+[ext_resource type="Texture2D" uid="uid://dpgo42ac3yi65" path="res://Assets/Graphics/space_background_pack/layers/parallax-space-backgound(1).png" id="1_xyl0f"]
+[ext_resource type="Texture2D" uid="uid://x63how7vlhiq" path="res://Assets/Graphics/Player.png" id="2_t22ti"]
+[ext_resource type="Texture2D" uid="uid://dhb1jg2iqvvff" path="res://Assets/Graphics/space_background_pack/layers/parallax-space-big-planet.png" id="3_jlmnn"]
+[ext_resource type="Texture2D" uid="uid://dg6rvb6s1qu5e" path="res://Assets/Graphics/space_background_pack/layers/parallax-space-far-planets.png" id="4_yyomd"]
+[ext_resource type="Texture2D" uid="uid://dqai3yfoojhp4" path="res://Assets/Graphics/space_background_pack/layers/parallax-space-stars(1).png" id="5_8o01k"]
+[ext_resource type="Texture2D" uid="uid://xv3qxqufje0a" path="res://Assets/Graphics/space_background_pack/layers/parallax-space-ring-planet.png" id="5_8vhqb"]
+[ext_resource type="Texture2D" uid="uid://k2j00g1k7lgn" path="res://Assets/Graphics/LinesO.png" id="6_gouwv"]
+[ext_resource type="Texture2D" uid="uid://c6tcuwsf1c72r" path="res://Assets/Graphics/UI.png" id="7_kwloy"]
+[ext_resource type="Texture2D" uid="uid://nb4ky34x8gam" path="res://Assets/Graphics/Enemy.png" id="9_jd40q"]
+[ext_resource type="Texture2D" uid="uid://bx2oiv7obsftm" path="res://Assets/challneger_animation.tres" id="9_kgu28"]
+[ext_resource type="Texture2D" uid="uid://dnrcltho0oeyj" path="res://Assets/Graphics/Player Rocket.png" id="9_l1ph8"]
+[ext_resource type="Curve" uid="uid://ot3llc4i7v5m" path="res://Assets/easeout.tres" id="10_t2tg5"]
+[ext_resource type="Texture2D" uid="uid://b1hxrsxh38yq7" path="res://Assets/Graphics/progress ring.png" id="10_uwg3l"]
+[ext_resource type="Texture2D" uid="uid://xcpkg01rv38v" path="res://Assets/Graphics/Enemy Rocket.png" id="11_hfxqv"]
+
+[sub_resource type="Gradient" id="Gradient_7rsk6"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ftvav"]
+gradient = SubResource("Gradient_7rsk6")
+
+[sub_resource type="Animation" id="Animation_kbyx7"]
+resource_name = "Attack"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.523599, 0.0]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Camera2D/Enemy:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.523599, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_886yy"]
+resource_name = "Idle"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.4, 2, 2.7, 3.4, 4, 4.7, 5.4, 6, 6.7, 7.4, 8, 8.7, 9.4, 10, 10.7, 11.4, 12, 12.7, 13.4, 14, 14.7, 15.4, 16, 16.7, 17.4, 18)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.4, 2, 2.7, 3.4, 4, 4.7, 5.4, 6, 6.7, 7.4, 8, 8.7, 9.4, 10, 10.7, 11.4, 12, 12.7, 13.4, 14, 14.7, 15.4, 16, 16.7, 17.4, 18)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Camera2D/Enemy:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1.5, 2, 2.6, 3.5, 4, 4.6, 5.5, 6, 6.6, 7.5, 8, 8.6, 9.5, 10, 10.6, 11.5, 12, 12.6, 13.5, 14, 14.6, 15.5, 16, 16.6, 17.5, 18)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Camera2D/Enemy:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 1.5, 2, 2.6, 3.5, 4, 4.6, 5.5, 6, 6.6, 7.5, 8, 8.6, 9.5, 10, 10.6, 11.5, 12, 12.6, 13.5, 14, 14.6, 15.5, 16, 16.6, 17.5, 18)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Camera2D/Enemy/TextureProgressBar:value")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 16)
+}
+
+[sub_resource type="Animation" id="Animation_t80of"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Camera2D/Enemy:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Camera2D/Enemy:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Camera2D/Enemy:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:self_modulate:r")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:self_modulate:g")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:self_modulate:b")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".:self_modulate:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".:position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-405, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CPUParticles2D4:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Camera2D/Enemy:position:x")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(355, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../Camera2D/Enemy:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(15, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../Camera2D/Enemy:modulate:r")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../Camera2D/Enemy:modulate:g")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Camera2D/Enemy:modulate:b")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../Camera2D/Enemy:modulate:a")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Camera2D/Enemy/CPUParticles2D6:emitting")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Camera2D/Enemy/TextureProgressBar:value")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_j2ybk"]
+resource_name = "Take Damage"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:self_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-411, -0.25, 0, 0.25, 0, -440, -0.25, 0, 0.25, 0, -429, -0.25, 0, 0.25, 0, -405, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(20, -0.25, 0, 0.25, 0, 15, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0, 12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.549996, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.350076, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CPUParticles2D4:emitting")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Camera2D/Enemy:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(390, -0.25, 0, 0.25, 0, 415, -0.25, 0, 0.25, 0, 390, -0.25, 0, 0.25, 0, 397, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Camera2D/Enemy:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(14, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 20, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Camera2D/Enemy:scale:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.55, -0.25, 0, 0.25, 0, 0.43, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Camera2D/Enemy:scale:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.35, -0.25, 0, 0.25, 0, 0.46, -0.25, 0, 0.25, 0, 0.45, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Camera2D/Enemy:modulate:r")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.26, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../Camera2D/Enemy:modulate:g")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.987667, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../Camera2D/Enemy:modulate:b")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../Camera2D/Enemy:modulate:a")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Camera2D/Enemy/CPUParticles2D6:emitting")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p2pnu"]
+_data = {
+"Attack": SubResource("Animation_kbyx7"),
+"Idle": SubResource("Animation_886yy"),
+"RESET": SubResource("Animation_t80of"),
+"Take Damage": SubResource("Animation_j2ybk")
+}
+
+[sub_resource type="Curve" id="Curve_rd1r2"]
+max_value = 100.0
+_data = [Vector2(0.792135, 0), 0.0, 0.0, 0, 0, Vector2(1, 100), 1330.11, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_f52wn"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.04, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0.321728, 0.321728, 0.321728, 1)
+
+[sub_resource type="Curve" id="Curve_56d1u"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Challneger animation" type="Node2D"]
+scale = Vector2(0.805, 0.805)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = -4096
+scale = Vector2(100, 100)
+texture = SubResource("GradientTexture2D_ftvav")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
+root_node = NodePath("../Player")
+libraries = {
+"": SubResource("AnimationLibrary_p2pnu")
+}
+autoplay = "Take Damage"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="Camera2D"]
+visible = false
+
+[node name="Parallax-space-backgound" type="Sprite2D" parent="Camera2D/Node2D"]
+self_modulate = Color(1, 1, 1, 0.941176)
+visibility_layer = 8
+z_as_relative = false
+scale = Vector2(4.22, 4.22)
+texture = ExtResource("1_xyl0f")
+
+[node name="Parallax-space-big-planet" type="Sprite2D" parent="Camera2D/Node2D/Parallax-space-backgound"]
+modulate = Color(1, 1, 1, 0.505882)
+position = Vector2(55.2133, -28.436)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_jlmnn")
+
+[node name="Parallax-space-far-planets" type="Sprite2D" parent="Camera2D/Node2D/Parallax-space-backgound"]
+modulate = Color(1, 1, 1, 0.505882)
+position = Vector2(-10.4265, 45.4976)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_yyomd")
+
+[node name="Parallax-space-ring-planet" type="Sprite2D" parent="Camera2D/Node2D/Parallax-space-backgound"]
+modulate = Color(1, 1, 1, 0.505882)
+position = Vector2(-108.531, -23.9337)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_8vhqb")
+
+[node name="Parallax-space-stars" type="Sprite2D" parent="Camera2D/Node2D/Parallax-space-backgound"]
+texture = ExtResource("5_8o01k")
+
+[node name="WhatsAppImage2024-07-09At18_54_3892Db5d86" type="Sprite2D" parent="Camera2D/Node2D"]
+modulate = Color(0.720467, 0.720468, 0.720467, 0.419608)
+clip_children = 2
+visibility_layer = 8
+z_as_relative = false
+position = Vector2(65, 74)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_gouwv")
+
+[node name="Ui" type="Sprite2D" parent="Camera2D/Node2D"]
+visibility_layer = 8
+z_index = 6
+z_as_relative = false
+scale = Vector2(0.935, 0.935)
+texture = ExtResource("7_kwloy")
+
+[node name="Enemy" type="Sprite2D" parent="Camera2D"]
+z_index = 1
+position = Vector2(355, 15)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("9_jd40q")
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="Camera2D/Enemy"]
+z_as_relative = false
+emitting = false
+amount = 30
+one_shot = true
+speed_scale = 3.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+texture = ExtResource("9_kgu28")
+emission_shape = 2
+emission_sphere_radius = 55.53
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 400.0
+angular_velocity_min = -720.0
+angular_velocity_max = 307.42
+radial_accel_max = 100.0
+damping_min = 25.0
+damping_max = 50.0
+damping_curve = SubResource("Curve_rd1r2")
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 1.5
+scale_amount_max = 2.5
+scale_amount_curve = ExtResource("10_t2tg5")
+color = Color(0.2, 0.454902, 0.698039, 1)
+color_ramp = SubResource("Gradient_f52wn")
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="Camera2D/Enemy"]
+z_as_relative = false
+amount = 30
+randomness = 0.2
+lifetime_randomness = 0.55
+texture = ExtResource("9_kgu28")
+emission_shape = 2
+emission_sphere_radius = 100.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 250.0
+angular_velocity_min = -720.0
+angular_velocity_max = 307.42
+orbit_velocity_max = 1.0
+radial_accel_min = -25.84
+radial_accel_max = 100.0
+damping_min = 25.0
+damping_max = 50.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.5
+scale_amount_curve = ExtResource("10_t2tg5")
+color = Color(0.870588, 0.121569, 0.152941, 1)
+color_ramp = SubResource("Gradient_f52wn")
+hue_variation_min = -0.05
+hue_variation_max = 0.05
+hue_variation_curve = SubResource("Curve_56d1u")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Camera2D/Enemy"]
+z_index = -2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -265.0
+offset_top = -300.0
+offset_right = 427.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+fill_mode = 4
+texture_under = ExtResource("10_uwg3l")
+texture_over = ExtResource("10_uwg3l")
+texture_progress = ExtResource("10_uwg3l")
+tint_under = Color(0.329412, 0.329412, 0.329412, 1)
+tint_over = Color(1, 1, 1, 0)
+tint_progress = Color(1, 0.316667, 0, 1)
+
+[node name="Player" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-405, 12)
+scale = Vector2(0.45, 0.45)
+skew = -0.0349066
+texture = ExtResource("2_t22ti")
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Player"]
+z_as_relative = false
+scale = Vector2(1, 1.00122)
+skew = 0.0348853
+amount = 30
+randomness = 0.2
+lifetime_randomness = 0.55
+texture = ExtResource("9_kgu28")
+emission_shape = 2
+emission_sphere_radius = 100.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 250.0
+angular_velocity_min = -720.0
+angular_velocity_max = 307.42
+orbit_velocity_max = 1.0
+radial_accel_min = -25.84
+radial_accel_max = 100.0
+damping_min = 25.0
+damping_max = 50.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.5
+scale_amount_curve = ExtResource("10_t2tg5")
+color = Color(0.168627, 0.494118, 0.768627, 1)
+color_ramp = SubResource("Gradient_f52wn")
+hue_variation_min = -0.05
+hue_variation_max = 0.05
+hue_variation_curve = SubResource("Curve_56d1u")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="Player"]
+z_as_relative = false
+scale = Vector2(1, 1.00122)
+skew = 0.0348853
+emitting = false
+amount = 30
+one_shot = true
+speed_scale = 3.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+texture = ExtResource("9_kgu28")
+emission_shape = 2
+emission_sphere_radius = 55.53
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 400.0
+angular_velocity_min = -720.0
+angular_velocity_max = 307.42
+radial_accel_max = 100.0
+damping_min = 25.0
+damping_max = 50.0
+damping_curve = SubResource("Curve_rd1r2")
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 1.5
+scale_amount_max = 2.5
+scale_amount_curve = ExtResource("10_t2tg5")
+color = Color(0.87, 0.1479, 0.304355, 1)
+color_ramp = SubResource("Gradient_f52wn")
+
+[node name="PlayerRocket" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(38, 58)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_l1ph8")
+flip_h = true
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="PlayerRocket"]
+z_as_relative = false
+position = Vector2(-13.3333, 0)
+amount = 150
+speed_scale = 2.0
+explosiveness = 0.2
+randomness = 1.0
+lifetime_randomness = 1.0
+texture = ExtResource("9_kgu28")
+emission_shape = 3
+emission_rect_extents = Vector2(1, 20)
+direction = Vector2(-100, 0)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 250.0
+linear_accel_max = 40.0
+damping_min = 25.0
+damping_max = 100.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.1
+scale_amount_max = 0.35
+scale_amount_curve = ExtResource("10_t2tg5")
+color = Color(0.98, 0.84476, 0.6272, 1)
+color_ramp = SubResource("Gradient_f52wn")
+hue_variation_min = -0.02
+hue_variation_max = 0.02
+hue_variation_curve = SubResource("Curve_56d1u")
+
+[node name="Enemy Rocket" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(-63, -45)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_hfxqv")
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="Enemy Rocket"]
+z_as_relative = false
+position = Vector2(26.6667, 0)
+amount = 150
+speed_scale = 2.0
+explosiveness = 0.2
+randomness = 1.0
+lifetime_randomness = 1.0
+texture = ExtResource("9_kgu28")
+emission_shape = 3
+emission_rect_extents = Vector2(1, 20)
+direction = Vector2(100, 0)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 250.0
+linear_accel_max = 40.0
+damping_min = 25.0
+damping_max = 100.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.1
+scale_amount_max = 0.35
+scale_amount_curve = ExtResource("10_t2tg5")
+color = Color(1, 0.73, 0.8065, 1)
+color_ramp = SubResource("Gradient_f52wn")
+hue_variation_min = -0.02
+hue_variation_max = 0.02
+hue_variation_curve = SubResource("Curve_56d1u")

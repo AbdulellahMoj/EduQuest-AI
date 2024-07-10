@@ -1,0 +1,160 @@
+$text-color-primary:#32316D;
+$text-color-tertiary: #656EB4;
+
+.navbar{
+    height: 14vh;
+    background: rgb(101,85,174);
+    background: linear-gradient(90deg, rgba(101,85,174,1) 0%, rgba(135,115,228,1) 60%); 
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 30px;
+    .navbar-left{
+      
+      display: flex;
+      width: 950px;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 30px;
+
+    //Menu Button Styling
+    .navbar-menu:hover{
+        cursor: pointer;
+
+    }
+    //Search Bar Styling
+
+    .search-form{
+        position: relative;
+    }
+    .search-box {
+       
+        border-radius: 15px; /* Adjust the value as needed */
+        border: 1px solid #ccc;
+        width:500px;
+        outline: none;
+        padding-left: 40px;
+        height: 40px;
+
+        font-family: 'Press Start 2P';
+        font-size: 10px;
+        color: $text-color-primary;
+
+      }
+      
+    .search-box:focus {
+        border-color: #441feb;
+        box-shadow: 0 0 5px rgb(109, 96, 228);
+      } 
+    
+    .search-box:hover{
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+
+    //Search Icon
+    .search-icon{
+        position:absolute;
+        top:4px;
+        left:10px;
+        width:16px;
+        fill:$text-color-tertiary;
+    }
+    
+    //Create Button Styling
+    .navbar-create{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 15px; /* Adjust the value as needed */
+        border: 1px solid #ccc;
+        width:150px;
+        outline: none;
+        background-color: white;
+        height: 40px;
+        
+        margin-right: 80px;
+
+        font-family: 'Press Start 2P';
+        font-size: 10px;
+        color:$text-color-primary;
+        user-select: none;  
+
+    }
+    .navbar-create:hover{
+        background-color: #6648e9;
+        cursor: pointer;
+        color:white;
+        transition: 0.3s ease-in-out;
+
+        .create-icon{
+            fill:white;
+        }
+        
+    }
+
+    //Create Icon
+    .create-icon{
+        position:absolute;
+        top:8px;
+        left:18px;
+        width:20px;
+        fill:$text-color-tertiary;
+    }
+
+    //Create Button Text
+    .create-text{
+        padding-left: 25px;
+    }
+    }
+  
+    .navbar-right{
+      display: flex;
+      width: 300px;
+      justify-content: space-around;
+      align-items: center;
+      padding-right: 30px;
+
+    //Streak Button Styling
+      .navbar-streak{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 15px; /* Adjust the value as needed */
+        border: 1px solid #ccc;
+        width:80px;
+        outline: none;
+        background-color: white;
+        height: 40px;
+        user-select: none; 
+
+        font-family: 'Press Start 2P';
+        font-size: 10px;
+        color:$text-color-primary;
+    }
+    
+    .streak-icon{
+        position:absolute;
+        top:8px;
+        left:18px;
+        width:15px;
+        fill:$text-color-tertiary;
+    }
+
+    .streak-number{
+        padding-left: 30px;
+    }
+
+    .navbar-circle:hover{
+        cursor: pointer;
+    }
+    
+    }
+  }
+
+
+
+.modal-button{
+    color:#441feb;
+}
+
+
