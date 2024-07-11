@@ -7,7 +7,6 @@ $background-primary:#C8CCFF;
 .levels{
     display: flex;
     justify-content: center;
-    background-color: white;
 
     .units-with-levels{
         width:80%;
@@ -26,7 +25,7 @@ $background-primary:#C8CCFF;
     }
     .level-selector{
         position: sticky;
-        top:0;
+        top:14px;
         width:2%;
         height:100%;
         margin-top:40px;
@@ -46,7 +45,8 @@ $background-primary:#C8CCFF;
     align-items: center;
     width:90%;
     height:200px;
-    background-color: $background-secondary;
+    background: rgb(135,114,228);
+    background: linear-gradient(90deg, rgba(135,114,228,1) 56%, rgba(100,80,190,1) 84%);
     border-radius: 30px;
 
     .units-container-internal{
@@ -64,14 +64,14 @@ $background-primary:#C8CCFF;
         .unit-title{
           font-family: 'Press Start 2P';
           font-size: 22px;
-          color: $text-color-primary;
+          color: white;
           padding-bottom: 10px;
         }
 
         .unit-text{
           font-family: 'Press Start 2P';
           font-size: 18px;
-          color: $text-color-primary;
+          color: white;
 
         }
     }
@@ -86,7 +86,7 @@ $background-primary:#C8CCFF;
     align-items: center;
     width:30px;
     height:700px;
-    background-color: $background-secondary;
+    background-color: #A391F1;
     border-radius: 30px;
 
     .levels-container-internal{
@@ -118,7 +118,7 @@ $background-primary:#C8CCFF;
             line-height: 35px; 
             border-radius: 50%; 
             text-align: center; 
-            background-color: $background-primary; 
+            background-color: #371AAC; 
             color: white; 
 
             &:hover{
@@ -137,3 +137,23 @@ $background-primary:#C8CCFF;
     }
 }
 
+.levels-background {
+    position: absolute; /* Ensures it stays behind other content */
+    height: 100%; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
+    overflow: hidden;
+    z-index:-3;
+  }
+
+//Next Level Button
+
+.next-question-text{          
+    position: absolute;
+    left: 95px;
+    bottom: 60px;
+    z-index: 1;
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    color: white;
+
+}

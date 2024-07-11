@@ -8,9 +8,9 @@ import Modall from "./components/Modall";
 import { useState } from "react";
 import Levels from "./pages/Levels";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import QuestionPage from "./pages/QuestionsPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
+import ChallengerMode from "./pages/ChallengerMode";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,6 +35,10 @@ function App() {
           path="/:courseCode/unit/:unitId/level/:levelId/questions"
           element={<QuestionsPage />}
         />
+        <Route
+          path="/:courseCode/unit/:unitId/level/:levelId/challenger"
+          element={<ChallengerMode />}
+        ></Route>
       </Routes>
     </Router>
   );

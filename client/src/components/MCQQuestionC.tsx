@@ -16,7 +16,7 @@ interface Props {
   mcqQuestionRef?: React.RefObject<HTMLDivElement>;
 }
 
-function MCQQuestion({
+function MCQQuestionC({
   question,
   questionNo,
   choice1,
@@ -52,37 +52,51 @@ function MCQQuestion({
         questionBannerRef={questionBannerRef}
         mcqQuestionRef={mcqQuestionRef}
       />
+      <div className="answer-container-c">
+        <div className="answer-column-left">
+          <div className="answer-1">
+            <MCQAnswer
+              letter="A"
+              text={choice1}
+              onClick={() => handleAnswerClick(0)}
+              fill={getFill(0)}
+              right="160px"
+            />
+          </div>
+          <div className="answer-2">
+            <MCQAnswer
+              letter="B"
+              text={choice2}
+              onClick={() => handleAnswerClick(1)}
+              fill={getFill(1)}
+              right="160px"
+            />
+          </div>
+        </div>
 
-      <MCQAnswer
-        letter="A"
-        text={choice1}
-        onClick={() => handleAnswerClick(0)}
-        fill={getFill(0)}
-        right="60"
-      />
-      <MCQAnswer
-        letter="B"
-        text={choice2}
-        onClick={() => handleAnswerClick(1)}
-        fill={getFill(1)}
-        right="60"
-      />
-      <MCQAnswer
-        letter="C"
-        text={choice3}
-        onClick={() => handleAnswerClick(2)}
-        fill={getFill(2)}
-        right="60"
-      />
-      <MCQAnswer
-        letter="D"
-        text={choice4}
-        onClick={() => handleAnswerClick(3)}
-        fill={getFill(3)}
-        right="60"
-      />
+        <div className="answer-column-right">
+          <div className="answer-3">
+            <MCQAnswer
+              letter="C"
+              text={choice3}
+              onClick={() => handleAnswerClick(2)}
+              fill={getFill(2)}
+              right="160px"
+            />
+          </div>
+          <div className="answer-4">
+            <MCQAnswer
+              letter="D"
+              text={choice4}
+              onClick={() => handleAnswerClick(3)}
+              fill={getFill(3)}
+              right="160px"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default MCQQuestion;
+export default MCQQuestionC;

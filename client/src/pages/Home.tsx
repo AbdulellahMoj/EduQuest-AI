@@ -7,6 +7,7 @@ import UploadBackDrop from "../assets/images/UploadBackDrop2.png";
 import UploadBanner from "../components/UploadBanner";
 import MCQQuestion from "../components/MCQQuestion";
 import ChatBot from "react-chatbotify";
+import Lines from "../components/Lines";
 
 interface HomeProps {
   onOpenModal: () => void;
@@ -15,6 +16,7 @@ interface HomeProps {
 function Home({ onOpenModal }: HomeProps) {
   return (
     <div className="home">
+      <Lines />
       <div className="hero">
         <div className="hero-title">
           <div className="hero-graphics"></div>
@@ -27,7 +29,7 @@ function Home({ onOpenModal }: HomeProps) {
             rate="87%"
             number={1}
             color="#33326C"
-            background={Theme1}
+            background={Theme4}
           />
           <Banner
             code="CPCS 203"
@@ -50,8 +52,8 @@ function Home({ onOpenModal }: HomeProps) {
             course="CALCULUS II"
             rate="26%"
             number={4}
-            color="#090A58"
-            background={Theme4}
+            color="#3E4083"
+            background={Theme1}
           />
           <UploadBanner
             color="#8772E4"

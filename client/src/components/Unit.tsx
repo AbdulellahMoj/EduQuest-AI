@@ -1,3 +1,5 @@
+import Lines from "./Lines";
+
 interface Props {
   title: string;
   text: string;
