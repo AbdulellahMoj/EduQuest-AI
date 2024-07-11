@@ -1,0 +1,172 @@
+{
+    "courseCode": "CPIT-110",
+    "courseTitle": "Software Engineering",
+    "units": [
+        {
+            "unitId": 1,
+            "unitText": "Introduction to Software Engineering",
+            "levels": [
+                {
+                    "levelId": 1,
+                    "questions": [
+                        {
+                            "questionId": 1,
+                            "questionType": "MCQ",
+                            "questionText": "What is software?",
+                            "choices": [
+                                "Computer programs and associated documentation",
+                                "Physical components of a computer",
+                                "A type of hardware",
+                                "None of the above"
+                            ],
+                            "answer": "Computer programs and associated documentation",
+                            "explanation": "Software refers to the computer programs and associated documentation.",
+                            "hint": "Think about the components of a computer system.",
+                            "mascot": "Software is the non-tangible component of a computer system."
+                        },
+                        {
+                            "questionId": 2,
+                            "questionType": "MCQ",
+                            "questionText": "What is software engineering?",
+                            "choices": [
+                                "A collection of techniques, methodologies and tools that help with the production of a high-quality software system",
+                                "The process of writing code",
+                                "A type of software",
+                                "None of the above"
+                            ],
+                            "answer": "A collection of techniques, methodologies and tools that help with the production of a high-quality software system",
+                            "explanation": "Software engineering involves a systematic and organised approach to software development.",
+                            "hint": "Think about the process of creating software.",
+                            "mascot": "Software engineering is about more than just writing code!"
+                        },
+                        {
+                            "questionId": 3,
+                            "questionType": "MCQ",
+                            "questionText": "What is the goal of software engineering?",
+                            "choices": [
+                                "To produce high quality software to meet user needs",
+                                "To write as much code as possible",
+                                "To make money",
+                                "None of the above"
+                            ],
+                            "answer": "To produce high quality software to meet user needs",
+                            "explanation": "The goal of software engineering is to create software that meets the needs of its users.",
+                            "hint": "Think about the end user of the software.",
+                            "mascot": "The goal of software engineering is to create software that is useful and reliable."
+                        },
+                        {
+                            "questionId": 4,
+                            "questionType": "FILL IN THE BLANK",
+                            "questionText": "Software engineers should adopt a ________ and organised approach to their work.",
+                            "choices": [
+                                "systematic",
+                                "random",
+                                "chaotic",
+                                "unplanned"
+                            ],
+                            "answer": "systematic",
+                            "explanation": "Software engineers should adopt a systematic and organised approach to their work.",
+                            "hint": "Think about the best way to approach a complex task.",
+                            "mascot": "A systematic approach helps to ensure that all aspects of the task are considered and addressed."
+                        },
+                        {
+                            "questionId": 5,
+                            "questionType": "MCQ",
+                            "questionText": "What is the Software Development Life Cycle (SDLC)?",
+                            "choices": [
+                                "A set of activities whose goal is the development or evolution of software",
+                                "A type of software",
+                                "A programming language",
+                                "None of the above"
+                            ],
+                            "answer": "A set of activities whose goal is the development or evolution of software",
+                            "explanation": "The Software Development Life Cycle (SDLC) is a set of activities and their relationships to each other to support the development of a software system.",
+                            "hint": "Think about the stages involved in creating software.",
+                            "mascot": "The SDLC is a roadmap for the development of software."
+                        }
+                    ]
+                },
+                {
+                    "levelId": 2,
+                    "questions": [
+                        {
+                            "questionId": 1,
+                            "questionType": "MCQ",
+                            "questionText": "What are the five phases of the Software Development Life Cycle (SDLC)?",
+                            "choices": [
+                                "Requirement, Analysis, Design, Implementation, Testing",
+                                "Planning, Analysis, Design, Implementation, Maintenance",
+                                "Requirement, Design, Coding, Testing, Maintenance",
+                                "None of the above"
+                            ],
+                            "answer": "Requirement, Analysis, Design, Implementation, Testing",
+                            "explanation": "The five phases of the SDLC are: Requirement, Analysis, Design, Implementation, Testing.",
+                            "hint": "Think about the stages involved in creating software.",
+                            "mascot": "Each phase of the SDLC has a specific purpose and output."
+                        },
+                        {
+                            "questionId": 2,
+                            "questionType": "MCQ",
+                            "questionText": "What is the waterfall model in software development?",
+                            "choices": [
+                                "A development process where the development flows in only one direction",
+                                "A development process where the development flows in multiple directions",
+                                "A type of software",
+                                "None of the above"
+                            ],
+                            "answer": "A development process where the development flows in only one direction",
+                            "explanation": "In the waterfall model, a phase cannot be started until the previous phase is completed.",
+                            "hint": "Think about a waterfall and how the water flows.",
+                            "mascot": "The waterfall model is a linear approach to software development."
+                        },
+                        {
+                            "questionId": 3,
+                            "questionType": "MCQ",
+                            "questionText": "What is the incremental model in software development?",
+                            "choices": [
+                                "A development process where software is developed in a series of steps",
+                                "A development process where software is developed all at once",
+                                "A type of software",
+                                "None of the above"
+                            ],
+                            "answer": "A development process where software is developed in a series of steps",
+                            "explanation": "In the incremental model, software is developed in a series of increments or steps.",
+                            "hint": "Think about building something piece by piece.",
+                            "mascot": "The incremental model allows for the development of software in stages."
+                        },
+                        {
+                            "questionId": 4,
+                            "questionType": "MCQ",
+                            "questionText": "What are the attributes of good software?",
+                            "choices": [
+                                "Maintainability, Dependability, Efficiency, Usability",
+                                "Speed, Size, Cost, Availability",
+                                "Color, Shape, Size, Weight",
+                                "None of the above"
+                            ],
+                            "answer": "Maintainability, Dependability, Efficiency, Usability",
+                            "explanation": "Good software should be maintainable, dependable, efficient, and usable.",
+                            "hint": "Think about what makes software useful and reliable.",
+                            "mascot": "Good software meets the needs of its users and operates efficiently and reliably."
+                        },
+                        {
+                            "questionId": 5,
+                            "questionType": "FILL IN THE BLANK",
+                            "questionText": "For software to be used properly and maintained efficiently, ________ is needed.",
+                            "choices": [
+                                "documentation",
+                                "a user manual",
+                                "technical support",
+                                "training"
+                            ],
+                            "answer": "documentation",
+                            "explanation": "Documentation is needed for software to be used properly and maintained efficiently.",
+                            "hint": "Think about what provides information about how to use and maintain software.",
+                            "mascot": "Documentation provides important information about the software and how to use and maintain it."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

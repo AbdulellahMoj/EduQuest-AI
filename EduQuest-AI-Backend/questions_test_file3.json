@@ -1,0 +1,73 @@
+{
+    "courseCode": "CPIT-220",
+    "courseTitle": "INTRODUCTION TO INFORMATION TECHNOLOGY",
+    "units": [
+        {
+            "unitId": 1,
+            "unitText": "DEFINING DATA & INFORMATION",
+            "levels": [
+                {
+                    "levelId": 1,
+                    "questions": [
+                        {
+                            "questionId": 1,
+                            "questionType": "MCQ",
+                            "questionText": "What is data?",
+                            "choices": [
+                                "Information when dealing with the machine",
+                                "Raw Form",
+                                "Processed Information",
+                                "None of the above"
+                            ],
+                            "answer": "Information when dealing with the machine",
+                            "explanation": "Data is information when dealing with the machine and it is in a raw form.",
+                            "hint": "Think about the form of data before it is processed.",
+                            "mascot": "Data is the raw information we use in computing!"
+                        },
+                        {
+                            "questionId": 2,
+                            "questionType": "MCQ",
+                            "questionText": "What is Information?",
+                            "choices": [
+                                "Any knowledge that comes to our attention",
+                                "Processed Data",
+                                "Both 1 and 2",
+                                "None of the above"
+                            ],
+                            "answer": "Both 1 and 2",
+                            "explanation": "Information is any knowledge that comes to our attention and it is processed data.",
+                            "hint": "Think about what data becomes after it is processed.",
+                            "mascot": "Information is processed data that can be understood and used!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "unitId": 2,
+            "unitText": "INFORMATION PROCESSING CYCLE",
+            "levels": [
+                {
+                    "levelId": 1,
+                    "questions": [
+                        {
+                            "questionId": 1,
+                            "questionType": "MCQ",
+                            "questionText": "What are the four basic operations of the information-processing cycle?",
+                            "choices": [
+                                "Input, Processing, Output, Storage",
+                                "Input, Output, Storage, Retrieval",
+                                "Input, Processing, Output, Retrieval",
+                                "Input, Processing, Storage, Retrieval"
+                            ],
+                            "answer": "Input, Processing, Output, Storage",
+                            "explanation": "The information-processing cycle consists of four basic operations: input, processing, output, and storage.",
+                            "hint": "Think about the steps taken from entering data to storing it.",
+                            "mascot": "Remember, data goes through a cycle of input, processing, output, and storage!"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
