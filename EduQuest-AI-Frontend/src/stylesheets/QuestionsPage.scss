@@ -1,0 +1,317 @@
+$text-color-primary:#32316D;
+$text-color-tertiary: #656EB4;
+$background-secondary:#E0E2FF;
+$background-primary:#C8CCFF;
+
+.mcq-page{
+    padding-top:75px;
+    height:86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    .mcq-question-container{
+        display: flex;
+        align-items: center;
+        padding-left:13%;
+        padding-bottom:80px;
+    }
+
+    .mcq-answers-container{
+        padding-bottom: 30px;
+        padding-left: 90px;
+        position: relative;
+
+        .mcq-answers{
+            display:flex;
+            z-index: 1;
+            position:relative;
+            height: 50px;
+
+            width:600px;
+            font-size: 14px;
+            font-family: "Press Start 2P";
+            color:$text-color-primary;
+            text-align: left;
+
+            padding-top: 12px;
+            padding-left: 18px;
+            margin-top: 20px;
+
+            &:hover{
+                cursor:pointer;
+            }
+
+            
+
+        }
+    }
+
+    .mcq-question{
+        z-index: 1;
+        position:relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:900px;
+        font-size: 22px;
+        font-family: "Press Start 2P";
+        color:$text-color-primary;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    
+}
+
+.questions-page{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.question-right-graphics{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .power-ups{
+        display: flex;
+        justify-content: right;
+        padding-right: 35px;
+    }
+
+    .power-ups-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:30px;
+        height:200px;
+        background-color: $background-secondary;
+        border-radius: 30px;
+    
+        .power-ups-container-internal{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+    
+            border:white;
+            height:98%;
+            width:20px;
+            border-width: 4px;
+            border-radius: 30px;
+            border-style: solid;
+        }
+    }
+    .mascot {
+      padding-bottom: 40px;
+      padding-right: 25px;
+    }
+    
+    .mascot-popup {
+      position: relative;
+    }
+    
+    .mascot-popup-container {
+      position: absolute;
+      right: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      min-width: 200px;
+      padding: 10px;
+      background-color: #664eca;
+      border-radius: 30px;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    .mascot-popup-internal {
+      width: 100%;
+      height: auto;
+      border: 4px solid white;
+      border-radius: 30px;
+      padding: 20px;
+    }
+    
+    .popup-text {
+      font-family: "Press Start 2P";
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      word-wrap: break-word;
+    }
+    
+      
+      /* Define the fadeIn animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+}
+
+
+//End Screen
+.question{
+  display: flex;
+  .mascot-end{
+    position:relative;
+    height:500px;
+    width:400px;
+    .mascot-end-graphics{
+      height:400px;
+
+      .mascot-text{
+        font-family: 'Press Start 2P';
+        font-size: 19px;
+        position:absolute;
+        top:300px;
+        left:58px;  
+        z-index: 1;
+        width:300px;
+        text-align: center;
+        color:white;
+      }
+    }
+  }
+  
+}
+
+
+.banner-end-containers{
+  display:flex;
+  
+}
+.banner-end-container{
+  position:absolute;
+  top:580px;
+  left:525px;
+  z-index: 1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .banner-end-number{
+    font-family: 'Press Start 2P';
+    font-size: 50px;
+    color:#30B16D;
+  }
+  .banner-end-subtext{
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    color:#32316D;
+  }
+  
+}
+
+.banner-end-container1{
+  position:absolute;
+  top:585px;
+  left:825px;
+  z-index: 1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .banner-end-number1{
+    font-family: 'Press Start 2P';
+    font-size: 50px;
+    color:#E34E4E;
+  }
+  .banner-end-subtext1{
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    color:#32316D;
+  }
+  
+  
+
+}
+
+.banner-end-container2{
+  position:absolute;
+  top:585px;
+  left:1160px;
+  z-index: 1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .banner-end-number2{
+    font-family: 'Press Start 2P';
+    font-size: 50px;
+    color:#8772E4;
+  }
+  .banner-end-subtext2{
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    color:#32316D;
+  }
+  
+  
+
+}
+
+.big-banner-end{
+  position: relative;
+
+  .big-banner-diagram{
+    position:absolute;
+    left:310px;
+    bottom:150px;
+    transform: scale(0.9);
+    z-index:1;
+  }
+
+  .big-banner-stars{
+    position: absolute;
+    left:130px;
+    bottom:100px;
+    transform: scale(0.7);
+    display: flex;
+    flex-direction: column;
+    z-index:1;
+
+  }
+
+  .big-banner-text{
+    position: absolute;
+    width:250px;
+    top:220px;
+    left:745px;
+    z-index: 1;
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    color:white;
+
+    .experience{
+      position:absolute;
+      top:80px;
+    }
+  }
+  
+}
+
+.back-to-map-text{
+  font-family: 'Press Start 2P';
+    font-size: 14px;
+    color:white;
+    position: absolute;
+    top:650px;
+    left:130px;
+    z-index: 1;
+}
+

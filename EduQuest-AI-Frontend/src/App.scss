@@ -1,0 +1,44 @@
+@import 'bootstrap/scss/bootstrap';
+@import './stylesheets/Navbar.scss';
+@import './stylesheets/Home.scss';
+@import "./stylesheets/Levels.scss";
+@import './stylesheets/Components.scss';
+@import './stylesheets/QuestionsPage.scss';
+@import './stylesheets/ChallengerMode.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import '@trimbleinc/modus-react-bootstrap/css/dist/modus-react-bootstrap.min.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+@import 'tailwindcss/base'; 
+@import 'tailwindcss/components'; 
+@import 'tailwindcss/utilities';
+
+
+
+
+
+$text-color-primary:#32316D;
+$text-color-tertiary: #656EB4;
+
+
+
+#root {
+  margin: 0 auto;
+}
+
+:root {
+  --red-500: #E34E4E;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+

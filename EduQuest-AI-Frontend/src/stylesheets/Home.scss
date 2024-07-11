@@ -1,0 +1,42 @@
+
+.home{
+    height: 86vh;
+    width:100%;
+        
+    .hero-title{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+  
+      width: 300px;
+  
+      .hero-graphics{
+        width:50px;
+        height:25px;
+        background-color: #8772E4;
+  
+  
+      }
+
+      
+      .hero-title-text{
+        padding-left: 10px;
+        font-family: 'Press Start 2P';
+          font-size: 20px;
+          color: $text-color-primary;
+      }
+    }
+
+    .hero-banners{
+      display: flex;
+      margin-top:40px;
+      margin-left:100px;
+      margin-right:100px;
+      width:80%;
+      justify-content: space-evenly;
+    }
+  }
+
+
+
+  

@@ -1,0 +1,159 @@
+$text-color-primary:#32316D;
+$text-color-tertiary: #656EB4;
+$background-secondary:#E0E2FF;
+$background-primary:#C8CCFF;
+
+
+.levels{
+    display: flex;
+    justify-content: center;
+
+    .units-with-levels{
+        width:80%;
+        height:95%;
+        padding-top:50px;
+
+        .mini-levels{
+            padding-bottom: 40px;
+            display:flex;
+            align-items: center;
+            justify-content: left;
+            margin-bottom:50px;
+            
+
+        }
+    }
+    .level-selector{
+        position: sticky;
+        top:14px;
+        width:2%;
+        height:100%;
+        margin-top:40px;
+    }
+
+
+
+}
+
+
+//Unit Component
+
+.units-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    height:200px;
+    background: rgb(135,114,228);
+    background: linear-gradient(90deg, rgba(135,114,228,1) 56%, rgba(100,80,190,1) 84%);
+    border-radius: 30px;
+
+    .units-container-internal{
+        
+        width: 99%;
+        height:92%;
+        border:white;
+        border-width: 4px;
+        border-radius: 30px;
+        border-style: solid;
+        padding-top: 40px;
+        padding-left: 20px;
+        
+
+        .unit-title{
+          font-family: 'Press Start 2P';
+          font-size: 22px;
+          color: white;
+          padding-bottom: 10px;
+        }
+
+        .unit-text{
+          font-family: 'Press Start 2P';
+          font-size: 18px;
+          color: white;
+
+        }
+    }
+}
+
+//LevelSelector Component
+
+.levels-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    height:700px;
+    background-color: #A391F1;
+    border-radius: 30px;
+
+    .levels-container-internal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+
+        border:white;
+        height:98%;
+        width:20px;
+        border-width: 4px;
+        border-radius: 30px;
+        border-style: solid;
+
+        .numbers{
+            display: flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            font-family: 'Press Start 2P';
+            font-size: 15px;
+
+            width: 35px; 
+            line-height: 35px; 
+            border-radius: 50%; 
+            text-align: center; 
+            background-color: #371AAC; 
+            color: white; 
+
+            &:hover{
+                cursor:pointer;
+                background-color:$text-color-primary;
+
+            }
+
+            &.selected {
+                background-color: $text-color-primary;
+                color: white; 
+            }
+            
+        }
+
+    }
+}
+
+.levels-background {
+    position: absolute; /* Ensures it stays behind other content */
+    height: 100%; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
+    overflow: hidden;
+    z-index:-3;
+  }
+
+//Next Level Button
+
+.next-question-text{          
+    position: absolute;
+    left: 95px;
+    bottom: 60px;
+    z-index: 1;
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    color: white;
+
+}
