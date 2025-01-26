@@ -1,23 +1,22 @@
-EduQuest-AI: Transforming Learning with Gamification
+<img src="resources\EduGuest1.png" width="300" alt="EduQuest-AI Logo">
 
-<img src="resources\EduGuest1.png" width="300" alt="EduQuest-AI Logo">🚀 Project Overview
-
-EduQuest-AI is an innovative platform that enhances learning through gamification. By combining modern technologies, it offers an interactive and engaging educational experience for users.
-
-
----
-
-🌐 Prototype URL
-
-Explore the Prototype Here
-
+## 🚀 Project Overview
+**EduQuest-AI** is an innovative platform that enhances learning through gamification. By combining modern technologies, it offers an interactive and engaging educational experience for users.
 
 
 ---
 
-🖥️ Frontend
+## 🌐 Prototype URL
 
-Technologies Used:
+[Explore the Prototype Here](https://eduquest-ai.vercel.app/)
+
+
+
+---
+
+## 🖥️ Frontend
+
+### Technologies Used:
 
 React, TypeScript, Sass, Vite
 
@@ -25,14 +24,14 @@ React, TypeScript, Sass, Vite
 
 ---
 
-🛠️ Backend
+## 🛠️ Backend
 
-Technologies Used:
+### Technologies Used:
 
 Flask, MongoDB, OpenAI API
 
 
-Key Features:
+### Key Features:
 
 User Management, Course Management, Progress Tracking, Power-Ups
 
@@ -40,7 +39,7 @@ User Management, Course Management, Progress Tracking, Power-Ups
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
 EduQuest-AI/
 ├── EduQuest-Al-Backend/             # Backend components
@@ -56,19 +55,17 @@ EduQuest-AI/
 
 ---
 
-🔮 Features
+## 🔮 Features
 
-Gamified Learning: Challenges, rewards, and power-ups keep students engaged.
-
-AI-Powered: Personalized learning paths and automated quizzes.
-
-Seamless User Experience: Easy navigation and intuitive design.
+- Gamified Learning: Challenges, rewards, and power-ups keep students engaged.
+- AI-Powered: Personalized learning paths and automated quizzes.
+- Seamless User Experience: Easy navigation and intuitive design.
 
 
 
 ---
 
-💡 Get Involved
+## 💡 Get Involved
 
 We welcome contributions and feedback to help improve EduQuest-AI.
 
@@ -79,7 +76,7 @@ We welcome contributions and feedback to help improve EduQuest-AI.
 
 ---
 
-📬 Contact Us
+## 📬 Contact Us
 
-For inquiries, reach out at [abdulellah.mazen@gmail.com].
+For inquiries, reach out at abdulellah.mazen@gmail.com.
 
