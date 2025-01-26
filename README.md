@@ -4,7 +4,8 @@
 
 **EduQuest-AI** is an innovative platform designed to transform the learning journey into an engaging and entertaining experience through gamification techniques. The project comprises a frontend and a backend, each built using state-of-the-art technologies to provide a seamless and interactive user experience.
 
-
+## Prototype URL
+- [🔗 Prototype](https://eduquest-ai.vercel.app/)
 
 ## Frontend
 
