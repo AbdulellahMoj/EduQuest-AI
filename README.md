@@ -41,6 +41,7 @@ User Management, Course Management, Progress Tracking, Power-Ups
 
 ## 📁 Project Structure
 
+```plaintext
 EduQuest-AI/
 ├── EduQuest-Al-Backend/             # Backend components
 ├── EduQuest-Al-Frontend/            # Frontend components
