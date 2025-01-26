@@ -51,7 +51,7 @@ EduQuest-AI/
 ├── .gitattributes                   # Git attributes configuration
 ├── challneger_animation.tscn        # Animation files
 ├── icon.svg                         # Project logo
-└── project.godot                    # Godot engine project file
+└── project.godot                    # Godot engine project file```
 
 
 ---
