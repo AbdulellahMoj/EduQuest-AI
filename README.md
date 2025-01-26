@@ -1,4 +1,5 @@
 # EduQuest-AI:
+<img src="resources\EduGuest.png" width="70">
 
 ## Project Overview
 
