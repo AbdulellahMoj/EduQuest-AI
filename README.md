@@ -1,4 +1,4 @@
-<img src="resources\EduGuest1.png" >
+<img src="resources\EduGuest1.png" width = "300">
 
 ## Project Overview
 
